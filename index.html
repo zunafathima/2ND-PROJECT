@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Miniso</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+        .hamburger-icon {
+    display: none;
+}
+.wrapper{
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top: 3px solid #d10709;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    z-index: 999;
+}
+
+.logo-text {
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+}
+
+.hamburger-icon {
+    border: none;
+    background-color: transparent;
+}
+
+.hamburger-icon .fa-bars,
+.hamburger-icon .fa-x {
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hamburger-icon input[type="checkbox"] {
+    appearance: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+    font-size: 22px;
+    justify-content: space-evenly;
+}
+.navigation li{
+    list-style: none;
+}
+.navigation a {
+    color: black;
+   text-decoration: none;
+}
+.navigation a:hover{
+    color: gray;
+}
+.logo img{
+    width: 100%;
+    height: 10vh;
+}
+@media screen and (max-width: 850px) {
+    header {
+        display: block;
+    }
+
+    .navigation {
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo img{
+    width: 20%;
+    height: 10vh;
+}
+    .hamburger-icon {
+        display: block;
+         width: 16%;
+    }
+
+    .fa-x {
+        display: none;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+        margin-top: 1rem;
+        height: 450px;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+        display: none;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+        display: inline-block;
+    }
+}
+.cardcontent{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.container1{
+    display: flex;
+   justify-content: center;
+} 
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    div#slider { overflow: hidden; margin-bottom: 5em; }
+    div#slider figure img { width: 20%; float: left; height: 600px;}
+    div#slider figure { 
+    position: relative;
+    width: 500%;
+    left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 20s slidy infinite; 
+    }
+    .container2 {
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+    margin-bottom: 5em;
+    align-items: center;
+    text-align: center;
+}
+
+.container2 .brand img{
+    width: 94%;
+    height: 695px;
+}
+.container2 .brand h1 {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    top: 13%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.brand{
+    position: relative;
+}
+
+.container2 h1:hover{
+    color: #d10709;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 42%;
+    gap: 10px;
+}
+.boxxx {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    height: 342px;
+    width: 98%;
+    gap: 3em;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.box h1{
+    font-size: 40px;
+    color: #222;
+}
+.box h5{
+    font-size: 16px;
+    color: #666;
+}
+.LEARN-MORE{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    color: #666;
+    border: 1px solid #666;
+    height: 45px;
+    width: 170px;
+}
+.LEARN-MORE:hover{
+    background-color: #d10709;
+    color: white;
+}
+.container2 .distributor{
+    width: 99%;
+    height: 343px;
+}
+.distributor img{
+    border: 1px solid #666;
+} 
+
+.distributor h2 {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 40px;
+}
+.distributor h2:hover{
+    color: #d10709;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container3 p{
+    font-size: 30px;
+    font-weight: bold;
+}
+.wholecard{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+    cursor: pointer;
+}
+.wholecard i{
+    display: flex; 
+    text-align: center;
+    height: 20vh;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.wholecard :hover{
+    color: #d10709;
+} 
+.productcard img{
+    width: 200px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+.productcard img:hover{
+transform: scale(0.9);
+}
+
+.householdimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.householdimg  h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.householdimg h1:hover{
+    color: #d10709;
+}
+.householdimg  p{
+    color: #666;
+    cursor: pointer;
+} 
+.separation{
+    border-top: 1px solid #666;
+    height: 40px;
+    width: 80%;
+}
+.container4 p{
+   font-size: 40px;
+   text-align: center;
+   margin: 30px;
+}
+.cardbox{
+    width: 26%;
+}
+.newsimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.para h1{
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+    font-size: 18px;
+} 
+.para h1:hover{
+    color: #d10709;
+}
+.para h3{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #666;
+    font-weight: 100;
+    cursor: pointer;
+} 
+.footer1 a{
+   text-decoration: none;
+   color: #666; 
+}
+.footer1 a:hover {
+    text-decoration: none;
+    color: white;
+}
+.footer1{
+    height: 153px;
+    text-align: center;
+    padding-top: 40px;
+}
+.btn{
+    border: 1px solid #666;
+    height: 45px;
+    width: 170px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #d10709;
+    color: white;
+}
+.line{
+    border-top: 2px solid black;
+}
+
+.copyright a{
+    color: #666;
+}
+.copyright a:hover{
+    color: #0e90d2;
+}
+
+.container5 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #666;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+}
+.img1 img{
+    width: 100%;
+    object-fit: cover;
+    height: 30vh;
+}
+.container2 .distributor {
+    width: 99%;
+    height: 343px;
+    position: relative;
+}
+@media only screen and (max-width:412px){
+    .newsimg{
+    flex-direction: column;
+    width: 22em;
+}
+}
+@media only screen and (max-width:768px) and (min-width:991px){
+    .wholecard{
+    flex-direction: column;
+}
+.container2{
+    flex-direction: column;
+}
+.newsimg{
+    flex-direction: column;
+    width: 17em;
+}
+.householdimg{
+    flex-direction: column;
+}
+.container2 .distributor {
+    width: 99%;
+    height: 343px;
+    position: relative;
+}
+.box{
+    width: 80%;
+}
+.container2 .brand h1{
+    font-size: 26px;
+}
+.wholecard i{
+  font-size: 4em;
+}
+.household p{
+    font-size: 25px;
+}
+.householdimg p{
+    font-size: 20px;
+}
+span.copyright {
+    font-size: 13px;
+}
+.para {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12em;
+}
+.img1 img{
+    width: 10em;
+    object-fit: cover;
+}
+.container5{
+    width: 23em;
+}
+}
+
+@media only screen and (max-width:767px){
+.wholecard{
+    flex-direction: column;
+}
+.container2{
+    flex-direction: column;
+}
+.newsimg{
+    flex-direction: column;
+    width: 17em;
+}
+.householdimg{
+    flex-direction: column;
+}
+.container2 .distributor {
+    width: 99%;
+    height: 343px;
+    position: relative;
+}
+.box{
+    width: 80%;
+}
+
+.container2 .brand h1{
+    font-size: 26px;
+}
+.wholecard i{
+  font-size: 4em;
+}
+.household p{
+    font-size: 25px;
+}
+.householdimg p{
+    font-size: 20px;
+}
+span.copyright {
+    font-size: 13px;
+}
+.para {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12em;
+}
+.img1 img{
+    width: 10em;
+    object-fit: cover;
+}
+.container5{
+    width: 23em;
+}
+}
+
+    </style>
+</head>
+<body>
+    <section class="header">
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <img src="images/download.jpg" alt="">
+                <button class="hamburger-icon">
+                    <label for="dropdown">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </label>
+                    <input type="checkbox" id="dropdown" />
+                </button>
+            </div>
+            <ul class="navigation">
+                <li class="items"><a href="#banner">Home</a></li>
+                <li class="items"><a href="#headimg">Brand</a></li>
+                <li class="items"><a href="#product">Product</a></li>
+                <li class="items"><a href="#houseimg">Special Campaign</a></li>
+                <li class="items"><a href="#news">News</a></li>
+                <li class="items"><a href="franchise.html">Franchise</a></li>
+                <li class="items">Investors</li>
+                <li class="items"><a href="contact.html">Contact Us</a></li>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </ul>
+        </header>
+    </div>
+</section>
+    <!-- START OF BANNER -->
+    <section class="banner" id="banner">
+        <div class="container1" id="home">
+            <div id="slider">
+                <figure>
+                <img src="images/banner.jpg" alt> 
+                <img src="images/BANNER-1920x1080.jpg" alt>
+                <img src="images/IR-banner(5).jpg" alt>
+                <img src="images/banner(1)-01.jpg" alt>
+                <img src="images/BANNER-1920x1080.jpg" alt>
+                </figure>
+                </div>  
+        </div>
+    </section>
+    <section class="headimg" id="headimg">
+        <div class="container2" id="brand">
+            <div class="brand">
+            <h1>Brand Profile</h1>
+            <img src="images/brandconceptnew.jpg" alt="">
+        </div>
+            <div class="box">
+                <div class="boxxx">
+                    <h1>Franchise Information</h1>
+                    <h5>We are looking for master franchisee !</h5>
+                    <span> <a href="#" class="LEARN-MORE">LEARN MORE &nbsp;&nbsp;<i
+                                class="fa-solid fa-arrow-right"></i></a></span>
+                            </div>
+                            <div class="distributor">
+                        <img src="images/distributor.jpg" alt="" class="distributor">
+                    <h2>Franchise</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF BANNER -->
+
+    <!-- START OF BEST CHOICE -->
+    <section class="product" id="product">
+        <div class="container3" id="product">
+            <p>Best Choice</p>
+        </div>
+        <div class="wholecard">
+            <div class="household">
+                <i class="fa-solid fa-kitchen-set"></i>
+                <p>Household Items </p>
+            </div>
+
+            <div class="household">
+                <i class="fa-solid fa-utensils"></i>
+                <p>Daily Life product</p>
+            </div>
+            <div class="household">
+                <i class="fa-solid fa-masks-theater"></i>
+                <p>Health & Beauty</p>
+            </div>
+            <div class="household">
+                <i class="fa-regular fa-gem"></i>
+                <p>Fashion Accessories</p>
+            </div>
+            <div class="household">
+                <i class="fa-solid fa-mobile"></i>
+                <p>Digital Product</p>
+            </div>
+            <div class="household">
+                <i class="fa-solid fa-bowl-food"></i>
+                <p>Food & Beverage</p>
+            </div>
+            
+
+        </div>
+        <div class="separation"></div>
+    </section>
+    
+
+
+    <section class="houseimg" id="houseimg">
+        <div class="householdimg" id="Special Campaign">
+            <div class="productcard">
+                <img src="images/household(1).jpg" alt="">
+                <div class="cardcontent">
+                    <h1>Plush Doll</h1>
+                    <p>Comfortable and ski...</p>
+                </div>
+
+            </div>
+            <div class="productcard">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIgOND2bZjt5ONVsOD8670F8APJAkB-sEinA&s" alt="">
+                <div class="cardcontent">
+                    <h1>M Night Light</h1>
+                    <p>The small night light...</p>
+                </div>
+
+            </div>
+            <div class="productcard">
+                <img src="images/household(3).jpg" alt="">
+                <div class="cardcontent">
+                    <h1>Noodles Bowl</h1>
+                    <p>colorful,enlarge an...</p>
+                </div>
+
+            </div>
+            <div class="productcard">
+                <img src="images/household(4).jpg" alt="">
+                <div class="cardcontent">
+                    <h1>Scent Diffuser</h1>
+                    <p>cooperate with "giv...</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END OF BEST CHOICE -->
+
+    <!-- START OF NEWS -->
+    <section class="news" id="news">
+        <div class="container4" id="news">
+            <p>News</p>
+        </div>
+        <div class="newsimg">
+            <div class="cardbox">
+                <div class="img1">
+                    <img src="images/news-1.png" alt="">
+                </div>
+                <div class="para">
+                    <h1>Global Lifestyle Retailer MINISO Annou...</h1>
+                    <h3>Global lifestyle retailer MINISO has announced its
+                        plans to expand operations into three new markets,
+                        namely Angola, Trinidad and Tobago, and Latvia. With</h3>
+                </div>
+            </div>
+            <div class="cardbox">
+                <div class="img1">
+                    <img src="images/news-2.png" alt="">
+                </div>
+                <div class="para">
+                    <h1>MINISO expands its U.S. operations sou...</h1>
+                    <h3>On November 25th, MINISO opened four new stores in
+                        Texas and two in Florida, doubling the global value
+                        retailer’s store count in these states.</h3>
+                </div>
+            </div>
+            <div class="cardbox">
+                <div class="img1">
+                    <img src="images/news-3.png" alt="">
+                </div>
+                <div class="para">
+                    <h1>Miniso Malaysia : Present the best and ...</h1>
+                    <h3>Most people’s impressions of MINISO are that it has all
+                        kinds of products, ranging from children’s toys,
+                        electronic products, snacks, hygiene products,</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF NEWS -->
+
+    <!-- FOOTER -->
+
+    <section class="footer">
+        <div class="footer1">
+            <button class="btn"><a href="#">LEARN MORE &nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></button>
+        </div>
+        <div class="line"></div>
+        <div class="container5">
+            <span class="copyright">© Copyright PT. Miniso International Compani</span>
+            <span class="copyright">© COPYRIGHT 2023 MINISOCO.LTDALL RIGHT RESERVED</span>
+            <span class="copyright">© Copyright Miniso.com </span>
+            <span class="copyright">
+                <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2021004007号-1</a>
+            </span>
+        </div>
+    </section>
+    <!-- END OF FOOTER -->
+</body>
+</html>

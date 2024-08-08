@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Franchise</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+        .hamburger-icon {
+    display: none;
+}
+.wrapper{
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top: 3px solid #d10709;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    z-index: 999;
+}
+
+.logo-text {
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+}
+
+.hamburger-icon {
+    border: none;
+    background-color: transparent;
+}
+
+.hamburger-icon .fa-bars,
+.hamburger-icon .fa-x {
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hamburger-icon input[type="checkbox"] {
+    appearance: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+    font-size: 22px;
+    justify-content: space-evenly;
+}
+.navigation li{
+    list-style: none;
+}
+.navigation a {
+    color: black;
+   text-decoration: none;
+}
+.navigation a:hover{
+    color: gray;
+}
+.logo img{
+    width: 100%;
+    height: 10vh;
+}
+@media screen and (max-width: 850px) {
+    header {
+        display: block;
+    }
+
+    .navigation {
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo img{
+    width: 20%;
+    height: 10vh;
+}
+    .hamburger-icon {
+        display: block;
+         width: 16%;
+    }
+
+    .fa-x {
+        display: none;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+        margin-top: 1rem;
+        height: 450px;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+        display: none;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+        display: inline-block;
+    }
+}
+.franchise{
+    position: relative;
+}
+.container6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container9 {
+    display: flex;
+    position: absolute;
+    font-size: 25px;
+    left: 15%;
+    top: 35%;
+    gap: 2em;
+    transform: translate(10px, 10px);
+    flex-direction: column; 
+    cursor: pointer;
+}
+img {
+    width: 90%;
+}
+.footer1 a{
+   text-decoration: none;
+   color: #666; 
+}
+.footer1 a:hover {
+    text-decoration: none;
+    color: white;
+}
+.footer1{
+    height: 153px;
+    text-align: center;
+    padding-top: 40px;
+}
+.btn{
+    border: 1px solid #666;
+    height: 45px;
+    width: 170px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #d10709;
+    color: white;
+}
+.line{
+    border-top: 2px solid black;
+}
+
+.copyright a{
+    color: #666;
+}
+.copyright a:hover{
+    color: #0e90d2;
+}
+
+.container5 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #666;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+}
+@media only screen and (max-width:768px) and (min-width:991px){
+    .container9{
+        font-size: 20px;
+    }
+    img{
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+    }
+    span.copyright {
+    font-size: 13px;
+}
+}
+@media only screen and (max-width:767px){
+    .container9{
+        font-size: 20px;
+    }
+    img{
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+    }
+    span.copyright {
+    font-size: 13px;
+}
+}
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <img src="images/download.jpg" alt="">
+                    <button class="hamburger-icon">
+                        <label for="dropdown">
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-x"></i>
+                        </label>
+                        <input type="checkbox" id="dropdown" />
+                    </button>
+                </div>
+                <ul class="navigation">
+                    <li class="items"><a href="index.html">Home</a></li>
+                    <li class="items"><a href="#headimg">Brand</a></li>
+                    <li class="items"><a href="#product">Product</a></li>
+                    <li class="items"><a href="#houseimg">Special Campaign</a></li>
+                    <li class="items"><a href="#news">News</a></li>
+                    <li class="items"><a href="franchise.html">Franchise</a></li>
+                    <li class="items"><a href="">Investors</a></li>
+                    <li class="items"><a href="contact.html">Contact Us</a></li>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </ul>
+            </header>
+        </div>
+    </section>
+    <!-- FRANCHISE -->
+    
+    <section>
+        <div class="franchise" id="franchise">
+            <div class="container6" id="franchise">
+                <img src="images/6378379785135479336020950_cleanup.jpeg" alt="">
+                <div class="container9">
+                <h1>Contact us</h1>
+                <p> <i class="fa-regular fa-envelope"></i>franchise@miniso.com</p>
+                <p><i class="fa-solid fa-phone"></i>+86 20 36228788
+                    ext.6800/6811 </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF FRANCHISE -->
+
+     <!-- FOOTER -->
+
+     <section class="footer">
+        <div class="footer1">
+            <button class="btn"><a href="#">LEARN MORE &nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></button>
+        </div>
+        <div class="line"></div>
+        <div class="container5">
+            <span class="copyright">© Copyright PT. Miniso International Compani</span>
+            <span class="copyright">© COPYRIGHT 2023 MINISO&nbsp;CO.LTD&nbsp;ALL RIGHT RESERVED</span>
+            <span class="copyright">© Copyright Miniso.com </span>
+            <span class="copyright">
+                <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2021004007号-1</a>
+            </span>
+        </div>
+    </section>
+    <!-- END OF FOOTER --> 
+</body>
+</html>

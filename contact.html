@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Contact</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+        .hamburger-icon {
+    display: none;
+}
+.wrapper{
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top: 3px solid #d10709;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    z-index: 999;
+}
+
+.logo-text {
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+}
+
+.hamburger-icon {
+    border: none;
+    background-color: transparent;
+}
+
+.hamburger-icon .fa-bars,
+.hamburger-icon .fa-x {
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hamburger-icon input[type="checkbox"] {
+    appearance: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+    font-size: 22px;
+    justify-content: space-evenly;
+}
+.navigation li{
+    list-style: none;
+}
+.navigation a {
+    color: black;
+   text-decoration: none;
+}
+.navigation a:hover{
+    color: gray;
+}
+.logo img{
+    width: 100%;
+    height: 10vh;
+}
+@media screen and (max-width: 850px) {
+    header {
+        display: block;
+    }
+
+    .navigation {
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo img{
+    width: 20%;
+    height: 10vh;
+}
+    .hamburger-icon {
+        display: block;
+         width: 16%;
+    }
+
+    .fa-x {
+        display: none;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+        margin-top: 1rem;
+        height: 450px;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+        display: none;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+        display: inline-block;
+    }
+}
+.container a{
+    text-decoration: none;
+    color: black;
+}
+.container a:hover {
+    text-decoration: none;
+    color:#d10709;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1px;
+    gap: 6em;
+}
+.container .items{
+    color: black;
+    font-size: 17px;
+    padding-top: 45px;
+    list-style-type: none;
+    cursor: pointer;
+}
+.container .items:hover{
+    color: #d10709;
+}
+.container ul{
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+.headerleft img{
+    position: absolute;
+    width: 7%;
+} 
+.container7 img{
+    height: 350px;
+    width: 100%;
+}
+#contact {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.boxes h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+}
+.cards {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    padding-top: 3em;
+    margin-bottom: 5em; 
+    flex-wrap: wrap;
+}
+.card1 {
+    font-weight: 100;
+    padding: 1em;
+    width: 265px;
+    height: 165px;
+    background-color: #f3f3f3;
+}
+.card1 h3{
+    color: #d10709;
+}
+.card1 p{
+    position: relative;
+    top: 2em;
+}
+.wholeeeee{
+    position: relative;
+   
+}
+.supplier{
+    display: flex;
+    justify-content: center;
+}
+.channel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 100;  
+}
+.learnmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #666;
+    border: 1px solid #666;
+    height: 45px;
+    width: 170px;
+    cursor: pointer;
+}
+.learnmore:hover{
+    background-color: #d10709;
+    color: white;
+}
+.footer1 a{
+   text-decoration: none;
+   color: #666; 
+}
+.footer1 a:hover {
+    text-decoration: none;
+    color: white;
+}
+.footer1{
+    height: 153px;
+    text-align: center;
+    padding-top: 40px;
+}
+.btn{
+    border: 1px solid #666;
+    height: 45px;
+    width: 170px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #d10709;
+    color: white;
+}
+.line{
+    border-top: 2px solid black;
+}
+
+.copyright a{
+    color: #666;
+}
+.copyright a:hover{
+    color: #0e90d2;
+}
+.container5 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #666;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+}
+.supplier img{
+    width: 100%;
+}
+@media only screen and (max-width:768px) and (min-width:991px){
+   .iframes{
+    width: 100%;
+   } 
+   .channel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 100;
+}
+}
+@media only screen and (max-width:767px){
+    .container9{
+        font-size: 20px;
+    }
+    img{
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+    }
+    span.copyright {
+    font-size: 13px;
+}
+}
+    </style>
+</head>
+<body>
+    <section class="header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <img src="images/download.jpg" alt="">
+                    <button class="hamburger-icon">
+                        <label for="dropdown">
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-x"></i>
+                        </label>
+                        <input type="checkbox" id="dropdown" />
+                    </button>
+                </div>
+                <ul class="navigation">
+                    <li class="items"><a href="index.html">Home</a></li>
+                    <li class="items"><a href="#headimg">Brand</a></li>
+                    <li class="items"><a href="#product">Product</a></li>
+                    <li class="items"><a href="#houseimg">Special Campaign</a></li>
+                    <li class="items"><a href="#news">News</a></li>
+                    <li class="items"><a href="franchise.html">Franchise</a></li>
+                    <li class="items"><a href="">Investors</a></li>
+                    <li class="items"><a href="contact.html">Contact Us</a></li>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </ul>
+            </header>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section>
+        <div class="contact" id="contact">
+            <div class="container7" id="contact">
+                <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+        frameborder="0" style="border:0; width: 100%; height: 500px;" allowfullscreen>
+      </iframe>
+            </div>
+            <div class="boxes">
+                  <h1>Opportunities for Cooperation</h1>
+            </div>
+            <div class="cards">
+            <div class="card1">
+                <h3>Contact For Legal Issue</h3>
+                <p>Mr. Ma</p>&nbsp;
+                <p>compliance@miniso.com</p>
+            </div>
+            <div class="card1">
+                <h3>Contact For Supplier</h3>
+                <p>400-700-5559</p>&nbsp;
+                <p>Supplier information collection：Please click here</p>
+            </div>
+            <div class="card1">
+                <h3>Contact For Media/PR</h3>
+                <p>pinpai@miniso.com</p>
+            </div>
+            <div class="card1">
+                <h3>Contact for complaint</h3>
+                <p>complaint@miniso.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="wholeeeee">
+          <div class="supplier">
+            <img src="images/supplierbg.jpeg" alt="">
+          </div>
+          <div class="channel">
+            <h1>Suppliers Channel</h1>
+            <br><br>
+            <p>Please contact us</p>&nbsp;  
+            <p>email:globalsourcing@miniso.com</p>
+            <br>
+            <button class="learnmore">LEARN-MORE <i class="fa-solid fa-arrow-right"></i></button >
+          </div>
+        </div>
+    </section>
+    <!-- END OF CONTACT -->
+     <!-- FOOTER -->
+
+     <section class="footer">
+        <div class="footer1">
+            <button class="btn"><a href="#">LEARN MORE &nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></button>
+        </div>
+        <div class="line"></div>
+        <div class="container5">
+            <span class="copyright">© Copyright PT. Miniso International Compani</span>
+            <span class="copyright">© COPYRIGHT 2023 MINISO&nbsp;CO.LTD&nbsp;ALL RIGHT RESERVED</span>
+            <span class="copyright">© Copyright Miniso.com </span>
+            <span class="copyright">
+                <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2021004007号-1</a>
+            </span>
+        </div>
+    </section>
+    <!-- END OF FOOTER -->  
+</body>
+</html>
